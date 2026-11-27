@@ -1,5 +1,5 @@
 // Med Reviewers offline helper. Version changes on every deploy (build_gh.py).
-const V='mr-030c08184f37', FONTS='mr-fonts', CORE=['./','manifest.webmanifest','icon-180.png','icon-512.png'];
+const V='mr-9d54af2979cd', FONTS='mr-fonts', CORE=['./','manifest.webmanifest','icon-180.png','icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil((async()=>{const c=await caches.open(V);
   await c.addAll(CORE.map(u=>new Request(u,{cache:'reload'})));
   if(!self.registration.active)await self.skipWaiting();})())});
